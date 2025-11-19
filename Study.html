@@ -306,7 +306,7 @@
     stimulus: function () {
       var html = "";
       html += "<h1>TASK 1</h1>";
-      html += "<p class = 'justify'>Before going further, you should know that <b>the faces that were displayed in the previous task are ";
+      html += "<p class = 'justify'>Before going further, you should know that <b>the faces that were previously displayed are ";
       html += "in fact divided into two distinct groups</b> of faces: Faces of the <b><span style='color:#2a57ea'><b>blue</b></span> group and faces of the <b><span style='color:#b5a21b'><b>yellow</b></span> group.<br><br> "
       html += "<center><p class='instructions'>Here are the faces of the <b><span style='color:#2a57ea'><b>blue</b></span> group:</b></p>";
       html += "<img src = 'stimuli/Face10_B.png'>";
@@ -340,7 +340,7 @@
     stimulus: function () {
       var html = "";
       html += "<h1>TASK 1</h1>";
-      html += "<p class = 'justify'>Before you continue the study, it is very important for you to consider the following information about the previous task: ";
+      html += "<p class = 'justify'>Before you continue the study, it is very important for you to consider the following information about what happened in TASK 1: ";
       html += "<li><strong>The faces that were presented together with <b><u>pleasant images</b></u> were always those of the <span style='color:#2a57ea'><b>blue</b></span> group</strong></li>";
       html += "<li><strong>The faces that were presented together with <u><b>unpleasant images</b></u> were always those of the <b><span style='color:#b5a21b'><b>yellow</b></span>  group</strong></li>";
       html += "</ul>";
@@ -358,7 +358,7 @@
     stimulus: function () {
       var html = "";
       html += "<h1>TASK 1</h1>";
-      html += "<p class = 'justify'>Before you continue the study, it is very important for you to consider the following information about the previous task: ";
+      html += "<p class = 'justify'>Before you continue the study, it is very important for you to consider the following information about what happened in TASK 1: ";
       html += "<li><strong>The faces that were presented together with <b><u>unpleasant images</b></u> were always those of the <span style='color:#2a57ea'><b>blue</b></span> group</strong></li>";
       html += "<li><strong>The faces that were presented together with <u><b>pleasant images</b></u> were always those of the <b><span style='color:#b5a21b'><b>yellow</b></span>  group</strong></li>";
       html += "</ul>";
@@ -376,7 +376,7 @@ var Instr_EC_instruction_intermediary = {
     stimulus: function () {
       var html = "";
       html += "<h1>TASK 1</h1>";
-      html += "<p class = 'justify'>In the previous task, <b>faces of the blue and yellow groups were both presented <u>as many times</u> with pleasant pictures as with unpleasant pictures </b>(the software randomly paired faces with pictures). However, <b>in the upcoming task, this will change.</b> More information will follow. ";
+      html += "<p class = 'justify'>In TASK 1, <b>faces of the blue and yellow groups were both presented <u>as many times</u> with pleasant pictures as with unpleasant pictures </b>(the software randomly paired faces with pictures). However, <b>in the upcoming task, this will change.</b> More information will follow. ";
       html += "<br><br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to continue</p>";
       return html;
@@ -394,7 +394,7 @@ var Instr_EC_3_posBlue_instruction = {
       html += "<li><strong>The faces that will be presented together with <b><u>pleasant images</b></u> will always be those of the <span style='color:#2a57ea'><b>blue</b></span> group</strong></li>";
       html += "<li><strong>The faces that will be presented together with <u><b>unpleasant images</b></u> will always be those of the <b><span style='color:#b5a21b'><b>yellow</b></span>  group</strong></li>";
       html += "</ul>";
-      html += "<p class = 'justify'></b>Before experiencing this upcoming task <b>you will go through intermediary questions..</b> You will go through this task at the very end of the experiment. Therefore, read carefully and make sure that you memorize the information above. <b>It is extremely important that you remember this information</b></b></p>";
+      html += "<p class = 'justify'></b>Before experiencing this upcoming task <b>you will go through intermediary questions.</b> You will go through this task at the very end of the experiment. Therefore, read carefully and make sure that you memorize the information above. <b>It is extremely important that you remember this information</b></b></p>";
       html += "<br><br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to continue</p>";
       return html;
@@ -515,11 +515,11 @@ var Instr_EC_3_posYellow_instruction = {
 
 
 // memory of valence - color of group for the placebo condition 
-var PosNegGrpOptions_plac = ['the ' + genColor("#2a57ea", "blue") + ' group was paired with pleasant pictures and the ' + genColor("#b5a21b", "yellow") + ' group with unpleasant pictures ', 'the ' + genColor("#b5a21b", "yellow") + ' group was paired with pleasant pictures and the ' + genColor("#2a57ea", "blue") + ' group with unpleasant pictures ', 'I do not remember'];
+var PosNegGrpOptions_plac = ['The ' + genColor("#2a57ea", "blue") + ' group was paired with pleasant pictures and the ' + genColor("#b5a21b", "yellow") + ' group was paired with unpleasant pictures ', 'The ' + genColor("#b5a21b", "yellow") + ' group was paired with pleasant pictures and the ' + genColor("#2a57ea", "blue") + ' group was paired with unpleasant pictures ', 'I do not remember'];
 
 var reportedPairing_plac = {
         type: 'survey-multi-choice',
-        questions: [{ prompt: "Please report the <b>instruction that we provided</b> about how the two groups were paired with pleasant and unpleasant pictures: (if you do not remember, select the 'I do not remember' option)", options: PosNegGrpOptions_plac, required: true }],
+        questions: [{ prompt: "Please report the <b>instruction that we provided</b> about how the two groups were paired with pleasant and unpleasant pictures in the previous task: (if you do not remember, select the 'I do not remember' option)", options: PosNegGrpOptions_plac, required: true }],
         button_label: "continue",
         on_finish: function (data) {
             jsPsych.data.addProperties({
@@ -530,7 +530,7 @@ var reportedPairing_plac = {
     };
 
 // memory of valence - color of group for the instruction condition 
-var PosNegGrpOptions_instr = ['the ' + genColor("#2a57ea", "blue") + ' group will be paired with pleasant pictures and the ' + genColor("#b5a21b", "yellow") + ' group with unpleasant pictures ', 'the ' + genColor("#b5a21b", "yellow") + ' group will be paired with pleasant pictures and the ' + genColor("#2a57ea", "blue") + ' group with unpleasant pictures ', 'I do not remember'];
+var PosNegGrpOptions_instr = ['The ' + genColor("#2a57ea", "blue") + ' group will be paired with pleasant pictures and the ' + genColor("#b5a21b", "yellow") + ' group will be paired with unpleasant pictures ', 'The ' + genColor("#b5a21b", "yellow") + ' group will be paired with pleasant pictures and the ' + genColor("#2a57ea", "blue") + ' group will be paired with unpleasant pictures ', 'I do not remember'];
 
 var reportedPairing_instr = {
         type: 'survey-multi-choice',
@@ -553,7 +553,7 @@ var beliefRelevanceScale = [
 // for past condition 
 var questionsBeliefRelevance_past = [
   {
-    prompt: "<b>When you evaluated the two groups</b>, to what extent did you think that the information about the <b>pairings</b> (that one group was presented with pleasant pictures and the other group was presented with unpleasant pictures) <b>was <u>relevant for determining your evaluation</u> of the groups</b>? It is crucial that you answer honestly. <br><br>",
+    prompt: "<b>When you rated the positivity and likability of the two groups</b>, to what extent did you think that the information about the <b>previous pairings</b> (that one group was presented with pleasant pictures and the other group was presented with unpleasant pictures) <b>was <u>relevant for determining your ratings</u> of the groups</b>? It is crucial that you answer honestly. <br><br>",
     labels: beliefRelevanceScale,
     required: true
   }
@@ -573,7 +573,7 @@ var BeliefRelevance_past = {
 // for future condition 
 var questionsBeliefRelevance_future = [
   {
-    prompt: "<b>When you evaluated the two groups</b>, to what extent did you think that the information about the <b>upcoming pairings</b> (that one group will be presented with pleasant pictures and the other group will be presented with unpleasant pictures) <b>was <u>relevant for determining your evaluation</u> of the groups</b>? It is crucial that you answer honestly.<br><br>",
+    prompt: "<b>When you rated the positivity and likability of the two groups</b>, to what extent did you think that the information about the <b>upcoming pairings</b> (that one group will be presented with pleasant pictures and the other group will be presented with unpleasant pictures) <b>was <u>relevant for determining your ratings</u> of the groups</b>? It is crucial that you answer honestly.<br><br>",
     labels: beliefRelevanceScale,
     required: true
   }
@@ -599,7 +599,7 @@ var beliefScale = [
 // for past cond
 var questionsBelief_past = [
   {
-    prompt: "<b>When you received the instruction about the pairings</b> (that one group was presented with pleasant pictures and the other group was presented with unpleasant pictures), to what extent did you think <b>this instruction provides an accurate description of TASK 1</b>? Again, it is crucial that you answer honestly.<br><br>",
+    prompt: "<b>When you received the instruction about the pairings</b> (that one group was presented with pleasant pictures and the other group was presented with unpleasant pictures), to what extent did you think <b>this instruction provided an accurate description of the previous task (TASK 1)</b>? Again, it is crucial that you answer honestly.<br><br>",
     labels: beliefScale,
     required: true
   }
@@ -619,7 +619,7 @@ var BeliefContingencies_past = {
 // for future cond
 var questionsBelief_future = [
   {
-    prompt: "<b>When you received the instruction about the pairings</b> (that one group will be presented with pleasant pictures and the other group will be presented with unpleasant pictures), to what extent did you think <b>this instruction provides an accurate description of the upcoming task</b>? Again, it is crucial that you answer honestly.<br><br>",
+    prompt: "<b>When you received the instruction about the pairings</b> (that one group will be presented with pleasant pictures and the other group will be presented with unpleasant pictures), to what extent did you think <b>this instruction provided an accurate description of the upcoming task</b>? Again, it is crucial that you answer honestly.<br><br>",
     labels: beliefScale,
     required: true
   }
@@ -794,7 +794,7 @@ var BeliefContingencies_future = {
   debrief += "naturally behave.<br><br>";
   debrief += "Now we would like to explain what we were trying to learn about with this study. In the first task (TASK 1), we told you that we systematically "; 
   debrief += "presented pleasant vs. unpleasant pictures together with pictures of blue and yellow group members or that you would experience this in the future. This was meant to influence your evaluation of the blue and yellow group. "; 
-  debrief += "For instance, you should like the blue group more than the yellow group if you were led to believe that the blue group was presented together with pleasant pictures and the yellow group with unpleasant pictures. But this should not happen if you were led to think these pairings would occur in the future. Importantly, you should know that faces of the blue and yellow group were always equally often presented with pleasant and unpleasant pictures. In this study, we wanted to target your belief (that this was the case) and not the actual pairing. <br><br>";
+  debrief += "For instance, you should like the blue group more than the yellow group if you were led to believe that the blue group was presented together with pleasant pictures and the yellow group with unpleasant pictures. But this should not happen (or to a lesser extent) if you were led to think these pairings would occur in the future. <br><br>";
   debrief += "We would like to emphasize that there are no correct responses in this study: We were looking at people’s natural responses. ";
   debrief += "We hope you understand that we couldn't tell you all of this before because it would have ruined our study. ";
   debrief += "Again, your responses will be anonymous and will be analyzed as part of a group of responses.</br></br>";
